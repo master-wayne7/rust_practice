@@ -52,8 +52,8 @@ fn main() {
 
     let mut values = vec![1, 2, 3, 4, 5];
 
-    let a = &values;
-    let b = &values;
+    // let a = &values;
+    // let b = &values;
 
     values[2] = 20000000;
 }
