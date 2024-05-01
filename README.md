@@ -143,11 +143,8 @@ Here's an example of using iterators to find the sum of squares of numbers in a 
 ```rust 
 fn main() {
     let numbers = vec![1, 2, 3, 4, 5];
-    let sum_of_squares: i32 = numbers
-        .iter()
-        .map(|&x| x * x)
-        .sum();
-    println!("Sum of squares: {}", sum_of_squares);
+    let sum: i32 = numbers.iter().sum();
+    println!("Sum: {}", sum);
 }
 ```
 Iterators in Rust are lazy, meaning they only perform operations when needed. This allows for efficient and composable code.
