@@ -138,7 +138,7 @@ Closures can capture variables from their environment, allowing for flexible and
 ### Exploring Iterators
 Iterators provide a way to traverse and process elements in a collection in a sequential manner. They are a fundamental part of Rust's standard library and are used extensively in Rust code.
 
-Here's an example of using iterators to find the sum of squares of numbers in a vector:
+Here's an example of using iterators to find the sum of numbers in a vector:
 
 ```rust 
 fn main() {
