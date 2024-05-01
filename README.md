@@ -53,3 +53,105 @@ I also learned about traits in Rust, which define shared behavior for types. Tra
 By understanding pattern matching and traits, I gained powerful tools for writing expressive and reusable code in Rust.
 
 ---
+
+## Day 5
+
+Today, I explored two powerful concepts in Rust: generics and dynamic dispatch.
+
+### Understanding Generics
+
+Generics in Rust allow me to write code that can work with any type. By abstracting over types, I can write functions, structs, and enums that are more flexible and reusable.
+
+Here's a simple example of a generic function that swaps the values of two variables:
+
+```rust
+fn swap<T>(a: &mut T, b: &mut T) {
+    std::mem::swap(a, b);
+}
+
+fn main() {
+    let mut x = 5;
+    let mut y = 10;
+    println!("Before swap: x = {}, y = {}", x, y);
+    swap(&mut x, &mut y);
+    println!("After swap: x = {}, y = {}", x, y);
+}
+```
+### Exploring Dynamic Dispatch
+Dynamic dispatch allows me to write code that operates on different types without knowing the exact type at compile time. This is achieved through trait objects, which enable runtime polymorphism.
+
+Here's an example of using dynamic dispatch with trait objects:
+
+```rust
+trait Animal {
+    fn sound(&self);
+}
+
+struct Dog;
+impl Animal for Dog {
+    fn sound(&self) {
+        println!("Woof!");
+    }
+}
+
+struct Cat;
+impl Animal for Cat {
+    fn sound(&self) {
+        println!("Meow!");
+    }
+}
+
+fn make_sound(animal: &dyn Animal) {
+    animal.sound();
+}
+
+fn main() {
+    let dog = Dog;
+    let cat = Cat;
+    make_sound(&dog);
+    make_sound(&cat);
+}
+```
+By learning about generics and dynamic dispatch, I gained the ability to write more flexible and versatile code in Rust.
+
+---
+
+## Day 6
+
+Today, I delved into two important concepts in Rust: closures and iterators.
+
+### Understanding Closures
+
+Closures are anonymous functions that can capture variables from their surrounding environment. They are a powerful tool for writing concise and expressive code in Rust.
+
+Here's an example of a closure that adds two numbers together:
+
+```rust
+fn main() {
+    let add = |a, b| a + b;
+    let result = add(3, 5);
+    println!("Result: {}", result);
+}
+```
+Closures can capture variables from their environment, allowing for flexible and reusable code. They can also be stored in variables or passed as arguments to other functions.
+
+### Exploring Iterators
+Iterators provide a way to traverse and process elements in a collection in a sequential manner. They are a fundamental part of Rust's standard library and are used extensively in Rust code.
+
+Here's an example of using iterators to find the sum of squares of numbers in a vector:
+
+```rust 
+fn main() {
+    let numbers = vec![1, 2, 3, 4, 5];
+    let sum_of_squares: i32 = numbers
+        .iter()
+        .map(|&x| x * x)
+        .sum();
+    println!("Sum of squares: {}", sum_of_squares);
+}
+```
+Iterators in Rust are lazy, meaning they only perform operations when needed. This allows for efficient and composable code.
+
+By learning about closures and iterators, I gained powerful tools for working with data and writing functional-style code in Rust.
+
+---
