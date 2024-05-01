@@ -1,12 +1,12 @@
-struct MasterCard {
-    number: u8,
-    verification: u8,
-}
-struct Visa {
-    number: u16,
-}
+// struct MasterCard {
+//     number: u8,
+//     verification: u8,
+// }
+// struct Visa {
+//     number: u16,
+// }
 struct WesternUnion {
-    name: String,
+    // name: String,
     verification: u8,
 }
 struct BitCredit {
