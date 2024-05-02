@@ -7,15 +7,9 @@ This Markdown document serves as a detailed log of my journey learning Rust prog
 
 ---
 
-<style>
-summary  {
-  font-size: 1.5em; 
-  margin: 0.5em 0; 
-}
-</style>
-
 <details>
-<summary><strong> Day 1 </strong></summary>
+<summary style = "font-size: 1.5em; 
+    margin: 0.5em 0;"><strong> Day 1 </strong></summary>
 
 Today, I started my journey in Rust by learning the basics of the language. I learned about Rust syntax, basic data types, and how to write simple programs.
 
@@ -26,7 +20,8 @@ One of the first programs I created is a guessing game. In this game, the user e
 
 ---
 <details>
-<summary><strong> Day 2 </strong></summary>
+<summary style = "font-size: 1.5em; 
+    margin: 0.5em 0;"><strong> Day 2 </strong></summary>
 
 Today, I delved into one of the core concepts of Rust programming: ownership and borrowing.
 
@@ -41,7 +36,8 @@ Understanding ownership and borrowing is crucial for writing safe and efficient 
 ---
 <details>
 
-<summary><strong> Day 3 </strong></summary>
+<summary style = "font-size: 1.5em; 
+    margin: 0.5em 0;"><strong> Day 3 </strong></summary>
 
 Today, I explored Rust's rich type system by learning about enums and structs.
 
@@ -55,7 +51,8 @@ By mastering enums and structs, I gained a deeper understanding of how to model 
 ---
 <details>
 
-<summary><strong> Day 4 </strong></summary>
+<summary style = "font-size: 1.5em; 
+    margin: 0.5em 0;"><strong> Day 4 </strong></summary>
 
 Today, I delved into two important topics in Rust: pattern matching and traits.
 
@@ -75,7 +72,8 @@ By understanding pattern matching and traits, I gained powerful tools for writin
 ---
 <details>
 
-<summary><strong> Day 5 </strong></summary>
+<summary style = "font-size: 1.5em; 
+    margin: 0.5em 0;"><strong> Day 5 </strong></summary>
 
 Today, I explored two powerful concepts in Rust: generics and dynamic dispatch.
 
@@ -139,7 +137,8 @@ By learning about generics and dynamic dispatch, I gained the ability to write m
 ---
 <details>
 
-<summary><strong> Day 6 </strong></summary>
+<summary style = "font-size: 1.5em; 
+    margin: 0.5em 0;"><strong> Day 6 </strong></summary>
 
 Today, I delved into two important concepts in Rust: closures and iterators.
 
@@ -178,7 +177,8 @@ By learning about closures and iterators, I gained powerful tools for working wi
 ---
 
 <details>
-<summary > <strong> Day 7 </strong></summary>
+<summary style = "font-size: 1.5em; 
+    margin: 0.5em 0;"> <strong> Day 7 </strong></summary>
 
 Today, I delved into several important concepts in Rust: `map`, `fold`, `filter`, and parallel iterators using the Rayon crate.
 
