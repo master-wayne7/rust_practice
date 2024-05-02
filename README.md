@@ -2,16 +2,31 @@
 
 ![Rust Logo](https://raw.githubusercontent.com/lecepin/rust-logo/5bcf63a2e8ad83cacdfe37880c060f71e608d2db/images/1660286946670.svg)
 
-## Day 1
+This Markdown document serves as a detailed log of my journey learning Rust programming language. Each section corresponds to a day of learning, where I summarize the concepts I've studied, the programs I've built, and the progress I've made. Dive into each day to explore the topics covered and my code commits, providing insights into my Rust learning process.
+
+
+---
+
+<style>
+summary  {
+  font-size: 1.5em; 
+  margin: 0.5em 0; 
+}
+</style>
+
+<details>
+<summary><strong> Day 1 </strong></summary>
 
 Today, I started my journey in Rust by learning the basics of the language. I learned about Rust syntax, basic data types, and how to write simple programs.
 
 One of the first programs I created is a guessing game. In this game, the user enters a number, and the program generates a random number. The user's number is then compared with the randomly generated number to determine if they've guessed correctly.
 
 
----
+</details>
 
-## Day 2
+---
+<details>
+<summary><strong> Day 2 </strong></summary>
 
 Today, I delved into one of the core concepts of Rust programming: ownership and borrowing.
 
@@ -21,10 +36,12 @@ I also learned about borrowing in Rust, which allows multiple parts of the code 
 
 Understanding ownership and borrowing is crucial for writing safe and efficient Rust code. I practiced creating programs that leverage these concepts to manage memory effectively and prevent common pitfalls like memory leaks and data races.
 
+</details>
 
 ---
+<details>
 
-## Day 3
+<summary><strong> Day 3 </strong></summary>
 
 Today, I explored Rust's rich type system by learning about enums and structs.
 
@@ -33,10 +50,12 @@ Enums, short for enumerations, allow me to define a type by enumerating its poss
 Additionally, I delved into structs, which are used to create custom data types by bundling together multiple pieces of data into a single compound type. Structs allow me to define the structure of my data and provide methods to operate on that data.
 
 By mastering enums and structs, I gained a deeper understanding of how to model real-world problems and organize data effectively in Rust programs.
+</details>
 
 ---
+<details>
 
-## Day 4
+<summary><strong> Day 4 </strong></summary>
 
 Today, I delved into two important topics in Rust: pattern matching and traits.
 
@@ -51,10 +70,12 @@ I created a simple markup language in Rust that performs text transformation bas
 I also learned about traits in Rust, which define shared behavior for types. Traits allow me to define methods that types must implement, enabling code reuse and polymorphism.
 
 By understanding pattern matching and traits, I gained powerful tools for writing expressive and reusable code in Rust.
+</details>
 
 ---
+<details>
 
-## Day 5
+<summary><strong> Day 5 </strong></summary>
 
 Today, I explored two powerful concepts in Rust: generics and dynamic dispatch.
 
@@ -113,10 +134,12 @@ fn main() {
 }
 ```
 By learning about generics and dynamic dispatch, I gained the ability to write more flexible and versatile code in Rust.
+</details>
 
 ---
+<details>
 
-## Day 6
+<summary><strong> Day 6 </strong></summary>
 
 Today, I delved into two important concepts in Rust: closures and iterators.
 
@@ -150,5 +173,51 @@ fn main() {
 Iterators in Rust are lazy, meaning they only perform operations when needed. This allows for efficient and composable code.
 
 By learning about closures and iterators, I gained powerful tools for working with data and writing functional-style code in Rust.
+</details>
 
 ---
+
+<details>
+<summary > <strong> Day 7 </strong></summary>
+
+Today, I delved into several important concepts in Rust: `map`, `fold`, `filter`, and parallel iterators using the Rayon crate.
+
+### Exploring map, fold, and filter
+
+`map`, `fold`, and `filter` are fundamental functions provided by iterators in Rust. They allow for efficient and expressive manipulation of collections.
+
+Here's a brief overview of each function:
+- `map`: Transforms each element in a collection according to a specified function.
+- `fold`: Accumulates the elements of a collection into a single value by applying a combining function.
+- `filter`: Selects elements from a collection that satisfy a specified predicate function.
+
+Here's an example of using `map`, `fold`, and `filter` to perform various operations on a vector:
+
+```rust
+fn main() {
+    let numbers = vec![1, 2, 3, 4, 5];
+
+    // Using map to square each number
+    let squared_numbers: Vec<_> = numbers.iter().map(|&x| x * x).collect();
+    println!("Squared Numbers: {:?}", squared_numbers);
+
+    // Using fold to find the sum of numbers
+    let sum: i32 = numbers.iter().fold(0, |acc, &x| acc + x);
+    println!("Sum: {}", sum);
+
+    // Using filter to select even numbers
+    let even_numbers: Vec<_> = numbers.iter().filter(|&x| x % 2 == 0).collect();
+    println!("Even Numbers: {:?}", even_numbers);
+}
+```
+
+### Using Rayon for Parallel Iterators
+Rayon is a high-performance parallel iterator library for Rust that allows for easy parallelization of computation across multiple threads.
+
+By leveraging Rayon's parallel iterators, I was able to significantly improve the performance of my computation by utilizing multiple CPU cores.
+
+</details>
+
+---
+
+The journey continues as I delve deeper into Rust, exploring more advanced topics and building more complex projects. Stay tuned for further updates as I progress on my Rust learning adventure!
