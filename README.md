@@ -220,4 +220,91 @@ By leveraging Rayon's parallel iterators, I was able to significantly improve th
 
 ---
 
+<details>
+<summary  style = "font-size: 1.5em; 
+    margin: 0.5em 0;"> <strong>Day 8 </strong></summary>
+
+Today, I delved into error handling in Rust, unit testing, integration testing, and documentation.
+
+### Error Handling
+
+Error handling in Rust is accomplished using the `Result` and `Option` enums. The `Result` type is commonly used to represent operations that may fail, while the `Option` type represents values that may or may not be present.
+
+Here's a simple example of error handling using `Result`:
+
+```rust
+use std::num::ParseIntError;
+
+fn parse_and_divide(s1: &str, s2: &str) -> Result<i32, ParseIntError> {
+    let a = s1.parse::<i32>()?;
+    let b = s2.parse::<i32>()?;
+    Ok(a / b)
+}
+
+fn divide(a: i32, b: i32) -> Result<i32, String> {
+    if b == 0 {
+        Err("division by zero".to_string())
+    } else {
+        Ok(a / b)
+    }
+}
+
+fn main() {
+    match divide(10, 2) {
+        Ok(value) => println!("Result: {}", value),
+        Err(error) => println!("Error: {}", error),
+    }
+
+    match parse_and_divide("10", "2") {
+        Ok(value) => println!("Parsed and divided result: {}", value),
+        Err(error) => println!("Error: {}", error),
+    }
+
+    match parse_and_divide("10", "0") {
+        Ok(value) => println!("Parsed and divided result: {}", value),
+        Err(error) => println!("Error: {}", error),
+    }
+}
+```
+### Testing
+Rust has robust support for testing built into the standard library. Unit tests are written using the #[test] attribute, while integration tests are placed in separate files within the tests directory.
+
+Here's an example of a unit test in Rust:
+
+```rust
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_addition() {
+        assert_eq!(2 + 2, 4);
+    }
+}
+```
+### Documentation
+Documentation in Rust is written using doc comments (///). These comments support Markdown syntax and can be used to generate documentation using tools like rustdoc.
+
+Here's an example of documenting a function in Rust:
+
+```rust
+/// Adds two numbers together.
+///
+/// # Examples
+///
+/// ```
+/// let result = add(2, 3);
+/// assert_eq!(result, 5);
+/// ```
+fn add(a: i32, b: i32) -> i32 {
+    a + b
+}
+```
+To generate documentation for your Rust project and view it in a browser, you can use the `cargo doc --open` command.
+
+By mastering error handling, testing, and documentation, I'm equipped with the tools to write reliable, well-tested, and well-documented Rust code.
+
+
+</details>
+
+---
+
 The journey continues as I delve deeper into Rust, exploring more advanced topics and building more complex projects. Stay tuned for further updates as I progress on my Rust learning adventure!
